@@ -863,6 +863,13 @@ def GetShortPath(tspec, *args):
     if type(tspec) == PNGraphMP: return GetShortPath_PNGraphMP(tspec, *args)
     if type(tspec) == PNEANetMP : return GetShortPath_PNEANetMP(tspec, *args)
     raise TypeError('First argument has invalid type')
+def GetShortPath_fast(tspec, *args):
+    if type(tspec) == PUNGraph: return GetShortPath_fast_PUNGraph(tspec, *args)
+    if type(tspec) == PUndirNet: return GetShortPath_fast_PUndirNet(tspec, *args)
+    if type(tspec) == PDirNet: return GetShortPath_fast_PDirNet(tspec, *args)
+    if type(tspec) == PNGraph : return GetShortPath_fast_PNGraph(tspec, *args)
+    if type(tspec) == PNEANet : return GetShortPath_fast_PNEANet(tspec, *args)
+    raise TypeError('First argument has invalid type')
 def GetKCoreNodes(tspec, *args):
     if type(tspec) == PUNGraph: return GetKCoreNodes_PUNGraph(tspec, *args)
     if type(tspec) == PUndirNet: return GetKCoreNodes_PUndirNet(tspec, *args)

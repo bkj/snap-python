@@ -115,6 +115,7 @@ TUNGraphEdgeI.GetId = GetId
 %template(GetNodesAtHops_PUNGraph) TSnap::GetNodesAtHops<PUNGraph>;
 // Shortest paths
 %template(GetShortPath_PUNGraph) TSnap::GetShortPath<PUNGraph>;
+%template(GetShortPath_fast_PUNGraph) TSnap::GetShortPath_fast<PUNGraph>;
 // Diameter
 %template(GetBfsFullDiam_PUNGraph) TSnap::GetBfsFullDiam<PUNGraph>;
 %template(GetBfsEffDiam_PUNGraph) TSnap::GetBfsEffDiam<PUNGraph>;

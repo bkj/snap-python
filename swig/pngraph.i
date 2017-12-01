@@ -117,6 +117,7 @@ TNGraphEdgeI.GetId = GetId
 %template(GetNodesAtHops_PNGraph) TSnap::GetNodesAtHops<PNGraph>;
 // Shortest paths
 %template(GetShortPath_PNGraph) TSnap::GetShortPath<PNGraph>;
+%template(GetShortPath_fast_PNGraph) TSnap::GetShortPath_fast<PNGraph>;
 // Diameter
 %template(GetBfsFullDiam_PNGraph) TSnap::GetBfsFullDiam<PNGraph>;
 %template(GetBfsEffDiam_PNGraph) TSnap::GetBfsEffDiam<PNGraph>;

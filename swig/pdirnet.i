@@ -111,6 +111,7 @@ TDirNetEdgeI.GetId = GetId
 %template(GetNodesAtHops_PDirNet) TSnap::GetNodesAtHops<PDirNet>;
 // Shortest paths
 %template(GetShortPath_PDirNet) TSnap::GetShortPath<PDirNet>;
+%template(GetShortPath_fast_PDirNet) TSnap::GetShortPath_fast<PDirNet>;
 // Diameter
 %template(GetBfsFullDiam_PDirNet) TSnap::GetBfsFullDiam<PDirNet>;
 %template(GetBfsEffDiam_PDirNet) TSnap::GetBfsEffDiam<PDirNet>;

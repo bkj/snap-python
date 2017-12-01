@@ -109,6 +109,7 @@ TUndirNetEdgeI.GetId = GetId
 %template(GetNodesAtHops_PUndirNet) TSnap::GetNodesAtHops<PUndirNet>;
 // Shortest paths
 %template(GetShortPath_PUndirNet) TSnap::GetShortPath<PUndirNet>;
+%template(GetShortPath_fast_PUndirNet) TSnap::GetShortPath_fast<PUndirNet>;
 // Diameter
 %template(GetBfsFullDiam_PUndirNet) TSnap::GetBfsFullDiam<PUndirNet>;
 %template(GetBfsEffDiam_PUndirNet) TSnap::GetBfsEffDiam<PUndirNet>;

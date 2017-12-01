@@ -247,6 +247,7 @@
 %template(GetNodesAtHops_PNEANet) TSnap::GetNodesAtHops<PNEANet>;
 // Shortest paths
 %template(GetShortPath_PNEANet) TSnap::GetShortPath<PNEANet>;
+%template(GetShortPath_fast_PNEANet) TSnap::GetShortPath_fast<PNEANet>;
 // Diameter
 %template(GetBfsFullDiam_PNEANet) TSnap::GetBfsFullDiam<PNEANet>;
 %template(GetBfsEffDiam_PNEANet) TSnap::GetBfsEffDiam<PNEANet>;

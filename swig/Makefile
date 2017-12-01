@@ -20,7 +20,14 @@
 
 # set the path to your SNAP directory here
 #GITDIR = ../../snap-dev
+
+# --
+# SET PARAMETERS
+
+INCLUDE_PYTHON = ${HOME}/.anaconda/include/python2.7
+INCLUDE_NUMPY = ${HOME}/.anaconda/python2.7/lib/dist-packages/numpy/core/include
 GITDIR = ../../snap
+
 SNAPDIR = $(GITDIR)/$(SNAP)
 GLIBDIR = $(GITDIR)/$(GLIB)
 SNAPADVDIR = $(GITDIR)/$(SNAPADV)
@@ -37,7 +44,7 @@ snap_wrap.cxx: snap.i snap_types.i tvec.i pneanet.i tmodenet.i tcrossnet.i pungr
 	swig $(SWIGFLAGS) -python -c++ -w302,312,317,325,362,383,384,389,401,503,508,509 -O -I$(SNAPDIR) -I$(SNAPADVDIR) -I$(GLIBDIR) snap.i
 
 snap_wrap.o: snap_wrap.cxx
-	g++ $(CXXFLAGS) -c snap_wrap.cxx -I$(SNAPDIR) -I$(SNAPADVDIR) -I$(GLIBDIR) -I/usr/include/python2.6 -I/usr/include/python2.7 -I/usr/lib/python2.7/dist-packages/numpy/core/include
+	g++ $(CXXFLAGS) -c snap_wrap.cxx -I$(SNAPDIR) -I$(SNAPADVDIR) -I$(GLIBDIR) -I$(INCLUDE_PYTHON) -I$(INCLUDE_NUMPY)
 
 Snap.o: 
 	$(CC) $(CXXFLAGS) -c $(SNAPDIR)/Snap.cpp -I$(SNAPDIR) -I$(SNAPADVDIR) -I$(GLIBDIR)
